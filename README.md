@@ -60,3 +60,18 @@ source ~/.vim/vim-init/init.vim
 # Credit
 
 TODO
+
+
+# 我改进后的配置
+
+## 主题配色
+
+更新了 PaperColor 主题，默认使用 PaperColor。主题修改位于文件 ./init-style.vim 中
+
+## 修改了默认的 TAB 和空格
+
+使得所有类型文件的 tab 均为 4 个空格，不再使用 '\t'。修改位于文件 ./init-tabsize.vim 中
+
+## 增加了部分个人的配置
+
+如：开启相对行号、高亮第 80 列、根据符号进行折行展示。修改位于文件 ./init-config.vim 中
