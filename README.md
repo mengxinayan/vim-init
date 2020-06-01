@@ -75,3 +75,38 @@ TODO
 ## 增加了部分个人的配置
 
 如：开启相对行号、高亮第 80 列、根据符号进行折行展示。修改位于文件 ./init-config.vim 中
+
+## 安装 YCM 的笔记
+
+在插件文件中，增加 YCM 插件。使用 :PlugInstall 安装，失败的话，运行 :PlugClean 并删除 `.vim/bundle/YouCompleteMe/` 文件夹，重新安装。直到成功安装，安装完成后。需要进入文件夹内，进行相应地编译操作。
+
+对 C 系语言使用 libclang：
+
+cd ~/.vim/bundle/YouCompleteMe
+./install.py --clang-completer
+
+对 C 系语言使用 clangd：
+
+cd ~/.vim/bundle/YouCompleteMe
+./install.py --clangd-completer
+
+libclang 和 clangd 可以同时安装，除非再配置中使用 `let g:ycm_use_clangd = 0` 命令禁止了 clangd，否则将默认使用 clangd 进行补全。
+
+不需要支持 C 系：
+
+cd ~/.vim/bundle/YouCompleteMe
+./install.py
+
+YCM 还支持一些其他语言：
+
+- C#：install Mono with Homebrew or by downloading the Mono macOS package and add --cs-completer when calling install.py.
+- Java: install JDK8 (version 8 required) and add --java-completer when calling install.py.
+- JavaScript and TypeScript: install Node.js and npm and add --ts-completer when calling install.py.
+- Go：install Go and add --go-completer when calling install.py.
+- Rust：add --rust-completer when calling install.py.
+If your Python interpreter is older than 2.7.9, you will also need rustup in your PATH.
+
+如果你需要尽可能多的支持，那么你需要使用 --all 选项。注意，--all 中并不包含 --clangd-completer
+
+cd ~/.vim/bundle/YouCompleteMe
+./install.py --all

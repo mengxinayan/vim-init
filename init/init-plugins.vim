@@ -17,6 +17,7 @@ if !exists('g:bundle_group')
 	let g:bundle_group = ['basic', 'tags', 'enhanced', 'filetypes', 'textobj']
 	let g:bundle_group += ['tags', 'airline', 'nerdtree', 'ale', 'echodoc']
 	let g:bundle_group += ['leaderf']
+	let g:bundle_group += ['ycm']
 endif
 
 
@@ -519,6 +520,14 @@ endif
 
 
 "----------------------------------------------------------------------
+" YouCompleteMe 安装
+"----------------------------------------------------------------------
+if index(g:bundle_group, 'ycm') >= 0
+	Plug 'ycm-core/YouCompleteMe'
+endif
+
+
+"----------------------------------------------------------------------
 " 结束插件安装
 "----------------------------------------------------------------------
 call plug#end()
@@ -543,10 +552,11 @@ set completeopt=menu,menuone,noselect
 
 " noremap <c-z> <NOP>
 
-" 两个字符自动触发语义补全
+" 两个字符自动触发语义补全，最后一行新增加的
 let g:ycm_semantic_triggers =  {
 			\ 'c,cpp,python,java,go,erlang,perl': ['re!\w{2}'],
 			\ 'cs,lua,javascript': ['re!\w{2}'],
+			\ 'rust': ['re!\w{2}'],
 			\ }
 
 
