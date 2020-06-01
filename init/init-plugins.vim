@@ -17,7 +17,7 @@ if !exists('g:bundle_group')
 	let g:bundle_group = ['basic', 'tags', 'enhanced', 'filetypes', 'textobj']
 	let g:bundle_group += ['tags', 'airline', 'nerdtree', 'ale', 'echodoc']
 	let g:bundle_group += ['leaderf']
-	let g:bundle_group += ['ycm']
+	let g:bundle_group += ['ycm', 'wakatime']
 endif
 
 
@@ -526,6 +526,12 @@ if index(g:bundle_group, 'ycm') >= 0
 	Plug 'ycm-core/YouCompleteMe'
 endif
 
+"----------------------------------------------------------------------
+" Wakatime 安装
+"----------------------------------------------------------------------
+if index(g:bundle_group, 'wakatime') >= 0
+	Plug 'wakatime/vim-wakatime'
+endif
 
 "----------------------------------------------------------------------
 " 结束插件安装

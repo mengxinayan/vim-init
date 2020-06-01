@@ -66,19 +66,19 @@ TODO
 
 ## 主题配色
 
-更新了 PaperColor 主题，默认使用 PaperColor。主题修改位于文件 ./init-style.vim 中
+更新了 PaperColor 主题，默认使用 PaperColor。主题修改位于文件 ./init/init-style.vim 中
 
 ## 修改了默认的 TAB 和空格
 
-使得所有类型文件的 tab 均为 4 个空格，不再使用 '\t'。修改位于文件 ./init-tabsize.vim 中
+使得所有类型文件的 tab 均为 4 个空格，不再使用 '\t'。修改位于文件 ./init/init-tabsize.vim 中
 
 ## 增加了部分个人的配置
 
-如：开启相对行号、高亮第 80 列、根据符号进行折行展示。修改位于文件 ./init-config.vim 中
+如：开启相对行号、高亮第 80 列、根据符号进行折行展示。修改位于文件 ./init/init-config.vim 中
 
 ## 安装 YCM 的笔记
 
-在插件文件中，增加 YCM 插件。使用 :PlugInstall 安装，失败的话，运行 :PlugClean 并删除 `.vim/bundle/YouCompleteMe/` 文件夹，重新安装。直到成功安装，安装完成后。需要进入文件夹内，进行相应地编译操作。
+在 `./init/init-plugins.vim` 插件文件中，增加 YCM 插件。使用 :PlugInstall 安装，失败的话，运行 :PlugClean 并删除 `.vim/bundle/YouCompleteMe/` 文件夹，重新安装。直到成功安装，安装完成后。需要进入文件夹内，进行相应地编译操作。
 
 对 C 系语言使用 libclang：
 
@@ -110,3 +110,7 @@ If your Python interpreter is older than 2.7.9, you will also need rustup in you
 
 cd ~/.vim/bundle/YouCompleteMe
 ./install.py --all
+
+# 增加时间统计功能，wakatime 插件（默认不开启）
+
+在 `./init/init-plugins.vim` 插件文件中，增加了 wakatime 用来统计时间。
