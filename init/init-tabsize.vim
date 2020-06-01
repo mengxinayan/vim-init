@@ -14,23 +14,41 @@
 "----------------------------------------------------------------------
 
 " 设置缩进宽度
-set sw=4
+" set sw=4
 
 " 设置 TAB 宽度
-set ts=4
+" set ts=4
 
 " 禁止展开 tab (noexpandtab)
-set noet
+" set noet
 
 " 如果后面设置了 expandtab 那么展开 tab 为多少字符
-set softtabstop=4
+" set softtabstop=4
 
 
-augroup PythonTab
-	au!
-	" 如果你需要 python 里用 tab，那么反注释下面这行字，否则vim会在打开py文件
-	" 时自动设置成空格缩进。
-	"au FileType python setlocal shiftwidth=4 tabstop=4 noexpandtab
-augroup END
+" augroup PythonTab
+" 	au!
+" 	" 如果你需要 python 里用 tab，那么反注释下面这行字，否则vim会在打开py文件
+" 	" 时自动设置成空格缩进。
+" 	"au FileType python setlocal shiftwidth=4 tabstop=4 noexpandtab
+" augroup END
 
 
+"----------------------------------------------------------------------
+" 我的缩进模式
+"----------------------------------------------------------------------
+
+" 设置缩进宽度，shiftwidth
+set sw=4
+
+" 设置 TAB 宽度，tabstop
+set ts=4
+
+" 如果后面设置了 expandtab 那么展开 tab 为多少字符，softtabstop
+set sts=4
+
+" 使 tab 转换为空格
+set expandtab
+
+" 禁止展开 tab (noexpandtab)
+" set noet
